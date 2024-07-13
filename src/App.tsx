@@ -9,7 +9,7 @@ function App() {
     <>
       <Topo />
       <div className='w-full h-auto flex justify-center'>
-        {/* <Image src={Cartaz2024} className='max-w-[100%] h-auto' radius='none' /> */}
+        <Image src={Cartaz2024} className='max-w-[100%] h-auto' radius='none' />
         <MyMapComponent />
       </div>
 

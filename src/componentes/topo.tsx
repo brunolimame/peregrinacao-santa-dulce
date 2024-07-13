@@ -1,4 +1,4 @@
-import { Button, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
+import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
 import { Image } from "@nextui-org/image";
 import logoTopo from "../assets/logo-peregrinacao-2024.webp";
 export default function topo() {
