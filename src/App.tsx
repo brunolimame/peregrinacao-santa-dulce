@@ -1,8 +1,6 @@
-import Topo from './componentes/topo'
-import Cartaz2024 from './assets/cartaz-2024.webp'
+import Topo from './componentes/topo';
+import Cartaz2024 from './assets/cartaz-2024.webp';
 import { Image } from "@nextui-org/image";
-import { Avatar, Link } from '@nextui-org/react';
-import { FaInstagram } from 'react-icons/fa';
 import LinkRedeSocialInstagram from './componentes/LinkRedeSocialInstagram';
 
 function App() {
