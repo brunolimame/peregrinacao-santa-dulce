@@ -14,7 +14,7 @@ export default function Programacao() {
                 <div className='w-full mx-auto flex justify-center pb-[30px] text-[38px] font-bold'>
                     <h2 className='max-sm:text-[18px]'>Programação</h2>
                 </div>
-                <div className="w-full p-6 grid grid-cols-4 gap-9 justify-center">
+                <div className="w-full p-6 grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 gap-9 justify-center">
 
                     {dadosProgramacao.map((item, index) => (<>
                         <Card key={index}>

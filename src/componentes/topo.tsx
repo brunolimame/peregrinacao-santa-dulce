@@ -20,7 +20,9 @@ export default function topo() {
     ]
     return (<>
 
-        <Navbar onMenuOpenChange={onOpenChangeMenu}>
+        <Navbar
+            isMenuOpen={isOpenMenu}
+            onMenuOpenChange={onOpenChangeMenu}>
             <NavbarContent>
                 <NavbarMenuToggle
                     aria-label={isOpenMenu ? "Close menu" : "Open menu"}
@@ -34,7 +36,6 @@ export default function topo() {
             <NavbarContent className="hidden sm:flex gap-4" justify="end">
                 {ItensMenu.map((item, index) => (
                     <NavbarItem key={index}>
-
                         <Link
                             color="foreground"
                             href={!item.acao ? item.link : undefined} onClick={item.acao ? item.acao : undefined}
@@ -53,6 +54,7 @@ export default function topo() {
                             color="foreground"
                             href={!item.acao ? item.link : undefined} onClick={item.acao ? item.acao : undefined}
                             size="lg"
+                            onClickCapture={onOpenChangeMenu}
                         >
                             {item.nome}
                         </Link>
