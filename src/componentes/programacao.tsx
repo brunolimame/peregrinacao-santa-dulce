@@ -6,7 +6,6 @@ export default function Programacao() {
     const formatarData = (dia: string, hora?: string) => {
         const data = `${dia.split('-').reverse().join('/')}`;
         return hora ? `${data} ${hora}` : data;
-
     }
     return (
         <>
