@@ -15,8 +15,8 @@ export default function topo() {
 
     const ItensMenu: MenuItem[] = [
         { nome: "Peregrinação 2024", link: "#", acao: handleIrAoTopo },
-        { nome: "Programação", link: "#", },
-        { nome: "Redes", link: "#", },
+        { nome: "Programação", link: "#programacao", },
+        { nome: "Informações", link: "#informacao", },
     ]
     return (<>
 
