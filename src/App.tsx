@@ -2,16 +2,12 @@ import Topo from './componentes/topo';
 import Cartaz from './componentes/Cartaz';
 import Informacao from './componentes/Informacao';
 import Video from './componentes/Video';
-import dadosProgramacao from './componentes/programacaoDados';
+import dadosProgramacao, { dataProgramacaoAtualizacao } from './componentes/programacaoDados';
 import { Card, CardBody, CardHeader, Divider } from '@nextui-org/react';
-import { FaRegCalendarAlt } from 'react-icons/fa';
+import { FaCaretRight } from 'react-icons/fa';
+import { FcCalendar, FcClock } from 'react-icons/fc';
 
 function App() {
-
-  const formatarData = (dia: string, hora?: string): string => {
-    const data = `${dia.split('-').reverse().join('/')}`;
-    return hora ? `${data} ${hora}` : data;
-  }
 
   return (
     <>
@@ -20,29 +16,56 @@ function App() {
       <Video />
 
       <div id="programacao" className='py-[40px] grid grid-cols-1 justify-center bg-white/40'>
-        <div className='w-full mx-auto flex justify-center pb-[30px] text-[38px] font-bold'>
-          <h2 className='max-sm:text-[18px]'>Programação</h2>
+        <div className='w-full mx-auto flex justify-center pb-[30px] flex flex-col text-center'>
+          <h2 className='max-sm:text-[18px] text-[38px] font-bold'>Programação</h2>
+          <div className='max-sm:text-[14px] text-[14px]'>Atualizada em <strong>{dataProgramacaoAtualizacao}</strong>, outras alterações serão comunicadas, </div>
+          <div className='max-sm:text-[14px] text-[14px] font-semibold text-red-600'>Teremos ônibus para o retorno!</div>
         </div>
-        <div className="w-full p-6 grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 gap-9 justify-center">
+        <div className="w-full p-6 grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-5 justify-center">
 
           {dadosProgramacao.map((item, index) => (<>
             <Card key={index}>
-              <CardHeader className="flex gap-3">
-                <FaRegCalendarAlt size={38} />
-                <div className="flex flex-col">
-                  <p className="text-md">{item.title}</p>
-                  <p className="text-small text-default-500">{formatarData(item.date, item.time)}</p>
+              <CardHeader>
+                <div>
+                  <div className='flex items-center gap-2'>
+                    <FcCalendar size={25} />
+                    <h2 className="text-[16x] font-bold">Dia {item.dia} - {item.semana}</h2>
+                  </div>
+                  {item.descricao && <h4 className='text-[14px] font-semibold'>{item.descricao}</h4>}
                 </div>
+
               </CardHeader>
               <Divider />
               <CardBody>
-                {item.description && <>
-                  <p>{item.description}</p>
+                {item.locais.length > 0 && <>
+                  <ul className='space-y-4'>
+                    {item.locais.map((local, index) => (<>
+                      <li key={index} className='space-y-1 flex flex-col'>
+                        <div className='flex items-start gap-1'>
+                          <div className='pt-1'><FcClock size={20} /></div>
+                          <div>
+                            <strong>{local.hora}</strong> - {local.titulo}
+                          </div>
+                        </div>
+                        {local.descricao && local.descricao.length > 0 && <>
+                          <ul>
+                            {local.descricao.map((descricao, index) => (
+                              <li key={":descricao-local-" + index + ":"}>
+                                <div className="flex items-start gap-1">
+                                  <div className='pt-[6px]'><FaCaretRight size={15} /></div>
+                                  <div>
+                                    {descricao}
+                                  </div>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        </>}
+                        {index < (item.locais.length - 1) && <div className='pt-2'><Divider /></div>}
+                      </li>
+                    </>))}
+                  </ul>
                 </>}
-                <h4><strong>Localização:</strong></h4>
-                <p>{item.location.name}</p>
-                <p>{item.location.address}</p>
-
               </CardBody>
             </Card>
           </>)
