@@ -11,9 +11,22 @@ export type ProgramacaoType = {
     locais: LocalizacaoType[];
 }
 
-export const dataProgramacaoAtualizacao:string = '15/07/2024';
+export const dataProgramacaoAtualizacao:string = '17/07/2024 - 10:53';
 
 const dadosProgramacao: ProgramacaoType[] = [
+    {
+        dia: '28//07',
+        semana: 'Domingo',
+        locais: [
+            {
+                hora: '6H às 22H',
+                titulo: 'Divulgação no Congresso Eu Seguirei com Frei Gilson - Comunidade Católica',
+                descricao: [
+                    "Cidade Santa, Dias d'Ávila - BA"
+                ]
+            },
+        ]
+    },
     {
         dia: '29/07',
         semana: 'Segunda-feira',
@@ -120,8 +133,14 @@ const dadosProgramacao: ProgramacaoType[] = [
             },
             {
                 hora: '19H',
-                titulo: 'Novena e Missa (Igreja Sta. Clara e Sta. Dulce)',
+                titulo: 'Novena',
+            },
+            {
+                hora: '19H',
+                titulo: 'Missa',
                 descricao: [
+                    "Responsáveis: Capela Jesus Misericordioso - Bairro Marianga, Capela Nossa Senhora Aparecida – Pov Lagamar, Capela Santa Terezinha do Menino - Jesus Pov. Serra e Enchei-vos",
+                    "Homenageados: Profissionais da Saúde (Igreja Sta. Clara e Sta. Dulce)",
                     "Tema: Com Santa Clara e Santa Dulce dos Pobres, aprendamos a viver a fraternidade e a amizade.",
                     "Lema: “Vós sois todos irmãos e irmãs” (Mt 23,8)"
                 ]
