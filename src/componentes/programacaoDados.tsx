@@ -11,11 +11,11 @@ export type ProgramacaoType = {
     locais: LocalizacaoType[];
 }
 
-export const dataProgramacaoAtualizacao:string = '17/07/2024 - 10:53';
+export const dataProgramacaoAtualizacao:string = '22/07/2024';
 
 const dadosProgramacao: ProgramacaoType[] = [
     {
-        dia: '28//07',
+        dia: '28/07',
         semana: 'Domingo',
         locais: [
             {
@@ -125,7 +125,7 @@ const dadosProgramacao: ProgramacaoType[] = [
                 ]
             },
             {
-                hora: '18H10',
+                hora: '18H13',
                 titulo: 'Pedágio Solidário',
                 descricao: [
                     "Igreja Sta. Clara e Sta. Dulce"
@@ -136,11 +136,11 @@ const dadosProgramacao: ProgramacaoType[] = [
                 titulo: 'Novena',
             },
             {
-                hora: '19H',
-                titulo: 'Missa',
+                hora: '19H30',
+                titulo: 'Missa (Igreja Sta. Clara e Sta. Dulce)',
                 descricao: [
                     "Responsáveis: Capela Jesus Misericordioso - Bairro Marianga, Capela Nossa Senhora Aparecida – Pov Lagamar, Capela Santa Terezinha do Menino - Jesus Pov. Serra e Enchei-vos",
-                    "Homenageados: Profissionais da Saúde (Igreja Sta. Clara e Sta. Dulce)",
+                    "Homenageados: Profissionais da Saúde",
                     "Tema: Com Santa Clara e Santa Dulce dos Pobres, aprendamos a viver a fraternidade e a amizade.",
                     "Lema: “Vós sois todos irmãos e irmãs” (Mt 23,8)"
                 ]
@@ -153,8 +153,11 @@ const dadosProgramacao: ProgramacaoType[] = [
                 ]
             },
             {
-                hora: 'Logo Após a Missa',
+                hora: 'Logo Após',
                 titulo: 'Quermesse de Sta. Clara e Sta. Dulce',
+                descricao: [
+                    "Apresentação da SOFIVA - Sociedade Filarmônica 28 de Agosto",
+                ]
             },
         ]
     },
