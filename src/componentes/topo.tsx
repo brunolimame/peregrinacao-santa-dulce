@@ -14,7 +14,7 @@ export default function topo() {
     const { isOpen: isOpenMenu, onOpenChange: onOpenChangeMenu } = useDisclosure();
 
     const ItensMenu: MenuItem[] = [
-        { nome: "Peregrinação 2024", link: "#", acao: handleIrAoTopo },
+        { nome: "Peregrinação 2025", link: "#", acao: handleIrAoTopo },
         { nome: "Programação", link: "#programacao", },
         { nome: "Informações", link: "#informacao", },
     ]
