@@ -1,4 +1,4 @@
-import Cartaz2024 from './../assets/cartaz-2024.webp';
+import Cartaz2024 from './../assets/cartaz-2025.webp';
 import { Image } from "@nextui-org/image";
 
 export default function Cartaz() {
